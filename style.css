@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.section_title {
+    font-size: 25px;
+    font-family: sans-serif;
+    color: blueviolet;
+    text-align: center;
+    margin: 40px 0px;
+    padding: 50px 0px;
+}
+
+/* header */
+header {
+    background-color: white;
+}
+nav h2{
+    font-size: 25px;
+    color: blueviolet;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+li {
+    list-style: none;
+}
+
+
+.nav_item {
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.nav_link {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+
+.home-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head-content h2 {
+    padding-top: 40px;
+    font-size: 35px;
+    color: blueviolet;
+}
+
+.head-content h1 {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-size: 65px;
+    font-weight: 600;
+    font-family: serif;
+}
+
+.head-content h3 {
+    padding-top: 10px;
+    font-size: 25px;
+    color: #555555;
+}
+
+.home__img {
+    width: 320px;
+}
+
+.home__blob {
+    fill: blueviolet;
+}
+
+.home__blob-img {
+    width: 410px;
+}
+
+.btn {
+    padding: 8px 15px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+/* about */
+.about_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 80px;
+}
+.about_me h2{
+    color: blueviolet;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+
+}
+.about_me p {
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.about_img img{
+    width: 450px;
+}
+
+/* skills */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.skills-list {
+    width: 640px;
+}
+
+.skills_img {
+    width: 640px;
+}
+
+.skill {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.skill_name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.line-box {
+    width: 100%;
+    background-color: rgb(197, 197, 197);
+    height: 17px;
+    border-radius: 15px;
+}
+
+.line {
+    background-color: blueviolet;
+    height: 17px;
+    border-radius: 15px;
+
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 70%;
+}
+
+.java {
+    width: 60%;
+}
+
+.python {
+    width: 65%;
+}
+
+.skills_img img {
+    width: 100%;
+}
+
+/* contact */
+
+.contact-container{
+    width: 400px;
+}
+.form{
+    margin: 0,6 auto;
+
+}
+.form input{
+    width: 100%;
+    height: 40px;
+    display: grid;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form textarea{
+    width: 100%;
+    height: 60px;
+    display: grid;
+    justify-content: space-between;
+}
+.form button{
+    width: 100%;
+    height: 35px;
+    display: grid;
+    text-align: center;
+    font-size: 15px;
+    background-color: blueviolet;
+    border: none;
+    margin-top: 15px;
+    color: white;
+}
+
+/* Footer */
+
+.footer{
+    margin-top: 40px;
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+}
+.footer h2{
+    font-size: 35px;
+    padding-top: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.footer i{
+    padding-top: 20px;
+    font-size: 28px;
+    margin: 0px 18px;
+}
+.footer p{
+    padding-top: 15px;
+    font-size: 20px;
+}
+
