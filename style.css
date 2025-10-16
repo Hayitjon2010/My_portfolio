@@ -20,14 +20,13 @@ html {
 
 .section_title {
     font-size: 25px;
-    font-family: sans-serif;
     color: blueviolet;
     text-align: center;
     margin: 40px 0px;
     padding: 90px 0px 50px 0px;
 }
 
-/* header */
+/* ===== Header va Navbar ===== */
 header {
     background-color: white;
 }
@@ -39,6 +38,7 @@ nav {
     width: 100%;
     background-color: white;
     border-bottom: 1px solid rgb(231, 231, 231);
+    z-index: 1000;
 }
 
 .navbar {
@@ -53,6 +53,7 @@ nav h2 {
     color: blueviolet;
 }
 
+/* Menyu linklari */
 ul {
     display: flex;
     gap: 25px;
@@ -73,6 +74,49 @@ li {
 .nav_link:hover {
     color: darkviolet;
 }
+
+/* ===== Responsive qism ===== */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+/* Telefon uchun dizayn */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    ul.active {
+        display: flex;
+    }
+
+    .nav_link {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    /* Hamburgerdan “X” holatiga o‘tish */
+    .menu-toggle.open i::before {
+        content: "\f00d"; /* Font Awesome X belgisi */
+    }
+}
+
 
 /* home */
 .home-container {
