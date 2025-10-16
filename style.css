@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +7,15 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section_title {
@@ -17,48 +24,63 @@
     color: blueviolet;
     text-align: center;
     margin: 40px 0px;
-    padding: 50px 0px;
+    padding: 90px 0px 50px 0px;
 }
 
 /* header */
 header {
     background-color: white;
 }
-nav h2{
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+nav h2 {
     font-size: 25px;
     color: blueviolet;
 }
-nav {
+
+ul {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0px;
+    gap: 25px;
 }
 
 li {
     list-style: none;
 }
 
-
-.nav_item {
-    display: inline-block;
-    margin: 0px 20px;
-}
-
 .nav_link {
     text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: blueviolet;
+    transition: 0.3s;
 }
 
+.nav_link:hover {
+    color: darkviolet;
+}
 
+/* home */
 .home-container {
-    position: relative;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
+    gap: 50px;
+    height: 100vh;
 }
 
 .head-content h2 {
@@ -68,11 +90,10 @@ li {
 }
 
 .head-content h1 {
-    padding-top: 15px;
-    padding-bottom: 25px;
-    font-size: 65px;
+    padding: 15px 0 25px;
+    font-size: 80px;
     font-weight: 600;
-    font-family: serif;
+    font-family: sans-serif;
 }
 
 .head-content h3 {
@@ -82,7 +103,9 @@ li {
 }
 
 .home__img {
-    width: 320px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 .home__blob {
@@ -90,63 +113,68 @@ li {
 }
 
 .home__blob-img {
-    width: 410px;
+    width: 85%;
+    max-width: 410px;
 }
 
 .btn {
-    padding: 8px 15px;
+    padding: 10px 20px;
     background-color: blueviolet;
     color: white;
     border-radius: 5px;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
+    cursor: pointer;
 }
 
 /* about */
 .about_container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
     column-gap: 80px;
+    padding: 30px;
 }
-.about_me h2{
+
+.about-img {
+    width: 440px;
+    justify-self: center;
+}
+
+.about_me h2 {
     color: blueviolet;
     font-size: 25px;
     font-family: sans-serif;
     font-weight: 600;
-
 }
+
 .about_me p {
     padding-top: 30px;
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: 500;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 28px;
 }
 
-.about_img img{
-    width: 450px;
+.about_img img {
+    width: 100%;
+    max-width: 450px;
 }
 
 /* skills */
-
 .skills-container {
     display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
 }
 
 .skills-list {
-    width: 640px;
-}
-
-.skills_img {
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
 }
 
 .skill {
-    width: 500px;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -167,7 +195,6 @@ li {
     background-color: blueviolet;
     height: 17px;
     border-radius: 15px;
-
 }
 
 .html {
@@ -188,63 +215,150 @@ li {
 
 .skills_img img {
     width: 100%;
+    border-radius: 10px;
 }
 
 /* contact */
-
-.contact-container{
-    width: 400px;
-}
-.form{
-    margin: 0,6 auto;
-
-}
-.form input{
+.contact-container {
     width: 100%;
-    height: 40px;
-    display: grid;
-    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
     margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.form textarea{
-    width: 100%;
-    height: 60px;
-    display: grid;
-    justify-content: space-between;
+
+.form textarea {
+    height: 100px;
 }
-.form button{
+
+.form button {
     width: 100%;
-    height: 35px;
-    display: grid;
-    text-align: center;
-    font-size: 15px;
+    padding: 10px;
+    font-size: 16px;
     background-color: blueviolet;
     border: none;
-    margin-top: 15px;
     color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Footer */
-
-.footer{
+.footer {
     margin-top: 40px;
     text-align: center;
     background-color: blueviolet;
     color: white;
+    padding-bottom: 30px;
 }
-.footer h2{
+
+.footer h2 {
     font-size: 35px;
     padding-top: 30px;
-    font-family: sans-serif;
     font-weight: 600;
 }
-.footer i{
+
+.footer i {
     padding-top: 20px;
     font-size: 28px;
     margin: 0px 18px;
 }
-.footer p{
+
+.footer p {
     padding-top: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
+/* 📱 RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .home-container,
+    .skills-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .about_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .skills_img {
+        display: none;
+    }
+
+    .head-content h1 {
+        font-size: 48px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .home-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .head-content h1 {
+        font-size: 36px;
+    }
+
+    .head-content h3 {
+        font-size: 20px;
+    }
+
+    .about_img img,
+    .skills_img img {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .head-content h1 {
+        font-size: 28px;
+    }
+
+    .head-content h3 {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+
+    .footer h2 {
+        font-size: 25px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+}
